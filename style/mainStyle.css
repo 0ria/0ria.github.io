@@ -26,3 +26,8 @@ body {
 .navbar {
   background-color: transparent !important;
 }
+
+#player {
+ display: flex;
+ justify-content: center; 
+}
