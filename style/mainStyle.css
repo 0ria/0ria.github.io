@@ -6,12 +6,27 @@
   --color-lightGreen: #2C3C38;
   --color-blackGround: #1A1A1A;
 
-  --radius: 0.2rem
+  --radius: 0.2rem;
 }
 
 body {
   font-family: sans-serif;
   background: var(--color-blackGround);
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+}
+
+.nav-link {
+  color: #ffffff !important;
+}
+
+.nav-link.active {
+  color: var(--color-redLogo) !important;
 }
 
 .main-image {
@@ -23,13 +38,9 @@ body {
   background-size: cover;
 }
 
-.navbar {
-  background-color: transparent !important;
-}
-
 #player {
- display: flex;
- justify-content: center; 
+  display: flex;
+  justify-content: center;
 }
 
 footer {
@@ -37,4 +48,57 @@ footer {
   color: #fff; /* Set text color */
   padding: 20px; /* Add some padding */
   text-align: center; /* Center the text */
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.logo-section {
+  min-height: 80vh;
+  background-color: var(--color-blackGround); 
+}
+
+.center-logo {
+  width: 150px;
+  height: 150px;
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: 20px;
+  animation: spin 8s linear infinite;
+  transform-style: preserve-3d;
+  transition: animation 0.3s ease-in-out;
+}
+
+/* Animación de giro continuo */
+@keyframes spin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.center-logo:hover {
+  animation: spin-fast 0.5s linear 1;
+}
+
+@keyframes spin-fast {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+
+h1, p {
+  margin: 0;
+  padding: 5px;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
